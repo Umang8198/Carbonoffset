@@ -1,0 +1,199 @@
+<%- include("partials/dheader") %>
+    <style>
+        .blog-img img {
+            width: 100%;
+        }
+
+        .blog-dashboard {
+            background: #fff;
+            padding: 50px 15px;
+            border-radius: 4px;
+        }
+
+        .blog-content p {
+            margin-top: 20px;
+        }
+
+        .blog-content small {
+            margin-top: 10px;
+        }
+
+        .blog-dashboard span {
+            font-size: 48px;
+            color: #000;
+            background: #7cc051;
+        }
+
+        .blog-img img {
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 57%);
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .blog-dashboard a.btn-read-more {
+            color: #7cc051;
+        }
+
+        .blog-dashboard .carousel-control-prev,
+        .blog-dashboard .carousel-control-next {
+            width: 5%;
+        }
+
+        .blog-dashboard .carousel-inner {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+
+            .blog-dashboard .carousel-control-prev,
+            .blog-dashboard .carousel-control-next {
+                display: none;
+            }
+
+            .blog-dashboard .carousel-inner {
+                width: 100%;
+            }
+
+            .blog-content h3 {
+                margin-top: 20px;
+            }
+        }
+    </style>
+
+
+
+    <div class="page-header">
+        <h3 class="page-title">
+            Energy Footprint </h3>
+    </div>
+    <div class="row">
+
+        <div class="col-lg-8 col-md-12">
+            <div class="row">
+                <% if(err_msg!=undefined){ %>
+                    <span class="error_validate flash_msg">
+                        <%= err_msg %>
+                    </span>
+                    <% }%>
+                        <% if(success_msg!=undefined){ %>
+                            <span class="flash_msg" style="color: green;">
+                                <%= success_msg %>
+                            </span>
+                            <% }%>
+                                <div class="col-lg-12 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Energy produced this month</h4>
+                                            <canvas id="barChartDark" style="height:230px"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Amounts Earned</h4>
+                        <canvas id="areachart-multi1" style="height:230px"></canvas>
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+            <div class="for-outer-relative">
+                <div class="right-side-box-new">
+                    <div>
+                        <ul class="navbar-nav navbar-nav-right ">
+                            <li class="nav-item">
+                                <a href="/coming-soon" target="_blank"><i class="mdi mdi-bell mr-2"></i></a>
+                            </li>
+                            <li class="nav-item nav-profile dropdown">
+                                <a class="nav-link" href="#">
+                                    <div class="nav-profile-img">
+                                        <img src="/front_admin/assets/images/user.png" alt="image">
+                                        <span class="availability-status online"></span>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="/user-logout"><i class="mdi mdi-logout mr-2"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-box-right">
+                        <ul>
+                            <li>
+                                <div>
+                                    <p><img src="/front_admin/assets/images/dash-new-icon.png"></p>
+                                    <h6>Daily kWh Produced </h6>
+                                    <h5>
+                                        Math.abs('daily')
+                                    </h5>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <p><img src="/front_admin/assets/images/dash-new-icon.png"></p>
+                                    <h6>Total Carbon Saved </h6>
+                                    <h5>
+                                        Math.abs(Math.round(carbonCount*100)/100) kgCO2
+                                    </h5>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <p><img src="/front_admin/assets/images/dash-new-icon.png"></p>
+                                    <h6>Current reward points</h6>
+                                    <h5>
+                                        rowan Reward Points
+                                    </h5>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <p><img src="/front_admin/assets/images/dash-new-icon.png"></p>
+                                    <h6>Available for withdrawal</h6>
+                                    <h5>£ pound <br> ( rowan Reward Points)</h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="redeem-points-box">
+                        <h3>Redeem your points</h3>
+                        <h6>Avalable Points</h6>
+                        <h4>£ pound ( rowan Reward Points) </h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="" placeholder="Enter amount(£)">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="" placeholder="Credit to">
+                        </div>
+                        <div>
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="mdi mdi-chevron-left"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="mdi mdi-chevron-right"></span>
+    </a>
+    </div>
+    </div>
+    <%- include("partials/dfooter") %>

@@ -1,0 +1,265 @@
+<%- include("partials/header") %>
+
+  <body>
+    <!-- Header Banner start -->
+    <div class="solar_top_header">
+      <div class="solar_header">
+        <div class="solar_menu_header">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-5">
+              <div class="solar_logo">
+                <a href="/"><img src="assets/images/logo-left.png" alt="solar-installation-logo" /></a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-7">
+              <div class="solar_menu_flex">
+                <div class="solar_menus">
+                  <ul>
+                    <span class="solar-close-icon"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/calculate">Calculate</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+
+                  </ul>
+                  <div class="solar_toggle">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+                </div>
+                <div class="solar_mdl_btn">
+                  <a href="/offset" class="solar_btn">Offset Now</a>
+                </div>
+                <ul>
+                  <% if(user!=null){ %>
+                    <% if(user.name!=undefined){ %>
+                      <li><a href="/#">
+                          <h5>
+                            &nbsp;
+                            <%=user.name%>
+                          </h5>
+                        </a></li>
+                      <% }%>
+                        <% }%>
+                </ul>
+                <% if(email==undefined){ %>
+                  <div class="solar_mdl_btn">
+                    <a href="/signup" class="solar_btn">Login/Signup</a>
+                  </div>
+                  <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="solar_banner wow fadeInUp" data-wow-delay="0.3s">
+              <div class="solar_content">
+                <h1>Welcome to CO2 Offset</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="javascript:;" class="solar_btn">Offset Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="solar_vector_banner wow fadeInUp" data-wow-delay="0.3s">
+              <img src="assets/images/banner-vector.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header Banner  end -->
+
+    <!-- Serivces Section Start -->
+    <div class="solar_Serivces_detail wow fadeInUp" data-wow-delay="0.3s">
+      <h5 class="solar_center">
+        Your Solution For Cutting Carbon And Caring For The Climate
+      </h5>
+      <h1 class="text_span">Carbon Offset</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="solar_Serivces">
+              <img src="assets/images/solar-icon6.png" alt="solar-installation-service1" />
+              <h3><a href="service-signle.html">Calculate</a></h3>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="solar_Serivces">
+              <img src="assets/images/solar-icon3.png" alt="solar-installation-service-2" />
+              <h3><a href="service-signle.html">Reduce</a></h3>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="solar_Serivces">
+              <img src="assets/images/solar-icon5.png" alt="solar-installation-service-3" />
+              <h3><a href="service-signle.html">Offset</a></h3>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="solar_Serivces">
+              <img src="assets/images/solar-icon5.png" alt="solar-installation-service-3" />
+              <h3><a href="service-signle.html">Communicate</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Serivces Section end -->
+
+    <!-- Footer Section Start -->
+    <div class="solar_footer">
+      <div class="container">
+        <div class="solar_footer_shape">
+          <div class="solar_footer_gradient"></div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="solar_footer_ab">
+                <a href="/"><img src="assets/images/logo-left-white.png" alt="solar-installation-footer-logo" /></a>
+                <p>
+                  Imagine making extra money from your home solar panels,
+                  without losing your existing subsidies or changing how you use
+                  your electricity.
+                </p>
+                <div class="top_solar_btn">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="solar_footer_links">
+                <h3>useful links</h3>
+                <div class="solar_links">
+                  <ul>
+                    <li>
+                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      <a href="/about">About Us</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      <a href="/calculate">Calculate</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      <a href="/faq">FAQs</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      <a href="/contact">Contact Us</a>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      <a href="#">Terms & Conditions</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      <a href="#">Privacy Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="solar_footer_contact">
+                <h3>contact us</h3>
+                <div class="solar_information">
+                  <ul>
+                    <li>
+                      Our friendly and knowledgeable team are on hand to answer
+                      any questions you might have, just get in touch.
+                    </li>
+
+                    <li>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>support@rowanenergy.com
+                    </li>
+                  </ul>
+                </div>
+                <p>Call Now</p>
+                <h1>+44 1223 92 6386</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solar_copyright">
+          <p>Copyright © 2021 Co2 Offset. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section end -->
+    <div class="solar_top_icon">
+      <a id="button"></a>
+    </div>
+    <!-- Modal -->
+    <div class="solar_quote">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">get a quote</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="contact_form">
+                <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter Your Name" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter Your Email" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter Your Subject" />
+                  </div>
+                  <div class="form-group">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" />
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="3" placeholder="Type Message..."></textarea>
+                  </div>
+                  <button type="submit" class="solar_btn">Send Now</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- javascript start -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Put external javascript here -->
+
+    <script src="assets/js/custom.js"></script>
+    <!-- javascript end -->
+  </body>
+
+  </html>

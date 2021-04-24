@@ -1,0 +1,334 @@
+<%- include("partials/header") %>
+
+	<body>
+		<!-- Header Banner start -->
+		<div class="solar_about_header">
+			<div class="solar_header">
+
+				<div class="solar_menu_header solar_menu_header_about">
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-5">
+							<div class="solar_logo">
+								<a href="/"><img src="assets/images/logo-left.png" alt="solar-installation-logo" /></a>
+							</div>
+						</div>
+						<div class="col-lg-9 col-md-8 col-sm-7">
+							<div class="solar_menu_flex">
+								<div class="solar_menus">
+									<ul>
+										<span class="solar-close-icon"><i class="fa fa-times-circle"
+												aria-hidden="true"></i></span>
+										<li><a href="/">Home</a></li>
+										<li><a href="/about">About</a></li>
+										<li><a href="/calculate">Calculate</a></li>
+										<li><a href="/faq">FAQs</a></li>
+										<% if(user.name!=undefined){ %>
+											<li><a href="/#">
+													<%=user.name%>
+												</a></li>
+											<% }%>
+												<% if(user.name!=undefined){ %>
+													<li><a href="/#">
+															<%=email%>
+														</a></li>
+													<% }%>
+									</ul>
+									<div class="solar_toggle">
+										<div class="bar1"></div>
+										<div class="bar2"></div>
+										<div class="bar3"></div>
+									</div>
+								</div>
+								<div class="solar_mdl_btn">
+									<a href="/offset" class="solar_btn">Offset Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- Header Banner  end -->
+
+		<!-- Why Choose Section Start -->
+		<div class="solar_aboutus_page pb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-delay="0.3s">
+						<div class="solar_our_vison_detail">
+							<h5 class="solar_center solar_left">Why Carbon Offset? </h5>
+							<h1 class="text_span">Why Carbon Offset?</h1>
+							<p>
+								Carbon offsetting funds solutions to reducing carbon emissions now. Frequently carbon
+								offsetting reduces emissions much faster than you can as an individual/single company.
+								Carbon offsetting projects help to combat global climate change as well as caring for
+								local communities. In many instances providing much needed employment, health
+								improvement, biodiversity, reforestation and broad social benefits to impoverished
+								communities.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-delay="0.3s">
+						<div class="solar_about_img">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/guNZIqxKmVM"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Why Choose Section end -->
+
+		<!-- About Section end -->
+		<div class="solar_section_accordian pb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-delay="0.3s">
+						<div class="solar_about_roads">
+							<h5 class="solar_center solar_left">How to Offset and Become Carbon Neutral</h5>
+							<h1 class="text_span">Carbon offsetting is easy and takes just 3 Steps!</h1>
+
+						</div>
+						<div class="solar_about_accordian">
+							<div id="accordion">
+								<div class="card">
+									<div class="card-header">
+										<a class="card-link" data-toggle="collapse" href="#collapseOne">
+											STEP 1 - calculate your emissions
+										</a>
+									</div>
+									<div id="collapseOne" class="collapse show" data-parent="#accordion">
+										<div class="card-body">
+											Individuals - Use our FREE online carbon footprint calculator
+											Small Businesses - Register and use our FREE online business calculator
+											Larger Businesses - We offer a consultancy appraisal service and
+											verification services
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header">
+										<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+											STEP 2 - start reducing your emissions
+										</a>
+									</div>
+									<div id="collapseTwo" class="collapse" data-parent="#accordion">
+										<div class="card-body">
+											Find out more about how to reduce your emissions
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header">
+										<a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+											STEP 3 - choose an offset project from our portfolio
+										</a>
+									</div>
+									<div id="collapseThree" class="collapse" data-parent="#accordion">
+										<div class="card-body">
+											View projects from our carbon offset portfolio
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-delay="0.3s">
+						<div class="solar_accordian_img">
+							<img src="assets/images/accordian.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About Section end -->
+
+		<!-- Why Choose Section Start -->
+		<div class="solar_aboutus_page pb-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 wow fadeInLeft" data-wow-delay="0.3s">
+						<div class="solar_our_vison_detail">
+							<h5 class="solar_center solar_left">Carbon Offset </h5>
+							<h1 class="text_span">What is a Carbon Offset?</h1>
+							<p>
+								A Carbon offset is a way to compensate for your emissions by funding an equivalent
+								carbon dioxide saving elsewhere. Our everyday actions, at home and at work, consume
+								energy and produce carbon emissions, such as driving, flying and heating buildings.
+								Carbon offsetting is used to balance out these emissions by helping to pay for emission
+								savings in other parts of the world.
+							</p>
+							<p>We offer a range of carbon offset projects to international standards, including the
+								Verified Carbon Standard (VCS), Gold Standard Voluntary Emission Reductions (VER) and
+								Certified Emission Reductions (CER). All of which meet the Quality Assurance Standard
+								for Carbon Offsetting following a footprint calculation on this web site and BSI's PAS
+								2060 specification on carbon neutrality.</p>
+							<p>Many of the carbon offsetting projects also provide wider benefits in addition to carbon
+								reduction, such as biodiversity, education, jobs, food security and heath & well-being
+								in developing countries.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Why Choose Section end -->
+
+		<!-- Why Choose Section Start -->
+		<div class="solar_aboutus_page pb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 wow fadeInLeft" data-wow-delay="0.3s">
+						<div class="solar_our_vison_detail">
+							<h5 class="solar_center solar_left">Climate Change </h5>
+							<h1 class="text_span">Is offsetting the solution to climate change?</h1>
+							<p>
+								Offsetting provides a mechanism to reduce greenhouse gas (GHG) emissions in the most
+								cost-effective and economically-efficient manner. Offsetting plays a vital role in
+								combating climate change, but if done in isolation it is not the solution.
+							</p>
+							<p>At Carbon Footprint, our belief is that climate change will only be addressed if
+								individuals, businesses and government organisations all takes responsible steps to
+								REDUCE our CO2 emissions as much as possible and then offset the remaining unavoidable
+								emissions.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Why Choose Section end -->
+
+
+
+
+		<!-- Footer Section Start -->
+		<div class="solar_footer">
+			<div class="container">
+				<div class="solar_footer_shape">
+					<div class="solar_footer_gradient"></div>
+					<div class="row">
+						<div class="col-lg-4 col-md-12">
+							<div class="solar_footer_ab">
+								<a href="/"><img src="assets/images/logo-left-white.png"
+										alt="solar-installation-footer-logo" /></a>
+								<p>Imagine making extra money from your home solar panels, without losing your existing
+									subsidies or changing how you use your electricity.</p>
+								<div class="top_solar_btn">
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12">
+							<div class="solar_footer_links">
+								<h3>useful links</h3>
+								<div class="solar_links">
+									<ul>
+
+										<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a
+												href="/about">About Us</a></li>
+										<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a
+												href="/calculate">Calculate</a></li>
+										<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a
+												href="/faq">FAQs</a></li>
+										<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a
+												href="/contact">Contact Us</a></li>
+
+										<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a
+												href="#">Terms & Conditions</a></li>
+										<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a
+												href="#">Privacy Policy</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12">
+							<div class="solar_footer_contact">
+								<h3>contact us</h3>
+								<div class="solar_information">
+									<ul>
+										<li> Our friendly and knowledgeable team are on hand to answer any questions you
+											might have, just get in touch.</li>
+
+										<li><i class="fa fa-envelope" aria-hidden="true"></i>support@rowanenergy.com
+										</li>
+									</ul>
+								</div>
+								<p>Call Now</p>
+								<h1>+44 1223 92 6386</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="solar_copyright">
+					<p>Copyright © 2021 Co2 Offset. All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Section end -->
+		<div class="solar_top_icon">
+			<a id="button"></a>
+		</div>
+		<!-- Modal -->
+		<div class="solar_quote">
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">get a quote</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="contact_form">
+								<form>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Enter Your Name">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Enter Your Email">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Enter Your Subject">
+									</div>
+									<div class="form-group">
+										<input type="file" class="form-control-file" id="exampleFormControlFile1">
+									</div>
+									<div class="form-group">
+										<textarea class="form-control" rows="3"
+											placeholder="Type Message..."></textarea>
+									</div>
+									<button type="submit" class="solar_btn">Send Now</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+
+		<!-- javascript start -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/wow.min.js"></script>
+		<script src="assets/js/swiper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<!-- Put external javascript here -->
+
+		<script src="assets/js/custom.js"></script>
+		<!-- javascript end -->
+
+	</body>
+
+	<!-- Mirrored from kamleshyadav.com/html/solar/solar-supplier//about by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Apr 2021 15:16:29 GMT -->
+
+	</html>
