@@ -22,16 +22,6 @@
 										<li><a href="/about">About</a></li>
 										<li><a href="/calculate">Calculate</a></li>
 										<li><a href="/faq">FAQs</a></li>
-										<% if(user.name!=undefined){ %>
-											<li><a href="/#">
-													<%=user.name%>
-												</a></li>
-											<% }%>
-												<% if(user.name!=undefined){ %>
-													<li><a href="/#">
-															<%=email%>
-														</a></li>
-													<% }%>
 									</ul>
 									<div class="solar_toggle">
 										<div class="bar1"></div>
@@ -42,6 +32,18 @@
 								<div class="solar_mdl_btn">
 									<a href="/offset" class="solar_btn">Offset Now</a>
 								</div>
+								<ul>
+									<% if(user!=null){ %>
+										<% if(user.name!=undefined){ %>
+											<li><a href="/#">
+													<h5>
+														&nbsp;
+														<%=user.name%>
+													</h5>
+												</a></li>
+											<% }%>
+												<% }%>
+								</ul>
 							</div>
 						</div>
 					</div>

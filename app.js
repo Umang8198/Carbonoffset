@@ -3,11 +3,10 @@ const path = require("path");
 var indexroutes = require("./routes");
 const app = express();
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/rowanrewards");
+mongoose.connect("mongodb://localhost/carbonOffset");
 const bodyParser = require("body-parser");
 const session = require('express-session');
 //app.use(cookieParser('keyboard cat'))
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); app.use(bodyParser.urlencoded({ extended: true }));

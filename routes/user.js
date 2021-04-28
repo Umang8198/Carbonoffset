@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 var crypto = require('crypto');
 
-//login routes
+
 router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
@@ -25,7 +25,6 @@ router.get("/login", function (req, res) {
     if (test != undefined || test === true) {
         res.redirect('/');
     } else {
-        console.log("dkjhasadk")
         res.render('user-login')
     }
 })
@@ -35,45 +34,90 @@ router.post('/login', async function (req, res) {
     console.log(req.session)
     console.log("login post")
     const password = req.body.password;
-
     const iv = crypto.randomBytes(16)
     const mykey = crypto.createCipher('aes-128-cbc', 'key', iv)
     var mystr = mykey.update(password, 'utf8', 'hex')
     mystr += mykey.final('hex');
     //console.log(mystr)
     let user = await User.findOne({ 'email': req.body.email, 'password': mystr });
-
-    //console.log("result", user);
     if (user == null) {
         console.log("user nahi mila");
         //req.flash('err_msg', 'Please enter valid Email address.');
         res.redirect('/login')
     } else {
-        console.log(user.username)
+        //console.log(user.username)
         req.session.success = true;
         req.session.is_user_logged_in = true;
         req.session.re_us_id = user._id;
         req.session.re_usr_email = user.email;
         req.session.name = user.name;
-        console.log(user);
+        //console.log(user);
         console.log(req.session)
         res.redirect('/')
     }
-
 })
 
 router.get("/logout", function (req, res) {
 
-
     req.session.destroy(function (err) {
-
-        console.log("in_logout")
+        console.log("User_logged_out")
     });
-
     //req.flash('success_logout', 'You have logged out successfully.');
+    res.redirect('/');
+})
 
-    res.redirect('/login');
-    //res.render('user-login')
+
+
+
+router.get("/signup", function (req, res) {
+    //err_msg = req.flash('err_msg');
+    //success_msg = req.flash('success_msg');
+    const test = req.session.is_user_logged_in;
+    console.log("test", test)
+    if (test == true) {
+        res.redirect('/');
+    } else {
+        res.render('user-signup')
+    }
+})
+
+//request to store user data from registration page 
+router.post('/signup', function (req, res) {
+    const email = req.body.email;
+    const password = req.body.password;
+    const name = req.body.name
+    const code = req.body.country_code
+    const phone = req.body.phone
+    // var mykey = crypto.createCipher('aes-128-cbc', 'mypass');
+    const iv = crypto.randomBytes(16)
+    const mykey = crypto.createCipher('aes-128-cbc', 'key', iv)
+    var mystr = mykey.update(password, 'utf8', 'hex')
+    mystr += mykey.final('hex');
+
+    User.findOne({ email: email }).then(user => {
+        if (user != null && user != "" && user != undefined) {
+            // req.flash('err_msg', 'This email already registerd.');
+            res.redirect("/signup");
+        } else {
+            us = {
+                name: name,
+                email: email,
+                country_code: code,
+                phone: phone,
+                password: mystr,
+            }
+            User.create(us, (err, us1) => {
+                if (err) {
+                    console.log(err);
+                    res.redirect('/signup');
+                } else {
+                    console.log(us1)
+                    res.redirect('/login');
+                }
+            })
+        }
+    })
+    // db.close()
 })
 
 module.exports = router
