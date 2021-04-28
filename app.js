@@ -6,13 +6,10 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/carbonOffset");
 const bodyParser = require("body-parser");
 const session = require('express-session');
-//app.use(cookieParser('keyboard cat'))
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json()); app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-//app.use(cookieParser('keyboard cat'))
 app.use(session({
     secret: 'keyboard cat',
     resave: false,

@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 
 var crypto = require('crypto');
 
-
 router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
